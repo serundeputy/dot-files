@@ -1,7 +1,7 @@
 # dot-files
 Dotfiles repository
 ##Quick start
-* copy ``.vimrc` from this repo to your .vimrc
+* copy ``vimrc` from this repo to your .vimrc
 * open it with `vim .vimrc`
 * install all the plugins
   * `::PluginInstall`

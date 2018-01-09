@@ -1,6 +1,9 @@
 """""""""""""""""""""""""""""""""""""
 " serundeputy Vimrc configuration 
 """""""""""""""""""""""""""""""""""""
+set nocompatible
+syntax on
+set nowrap
 set encoding=utf8
 
 """" START Vundle Configuration 
@@ -58,6 +61,7 @@ Plugin 'tpope/vim-fugitive'
 " PHP Support
 Plugin 'phpvim/phpcd.vim'
 Plugin 'tobyS/pdv'
+Plugin 'joonty/vdebug'
 
 " Erlang Support
 Plugin 'vim-erlang/vim-erlang-tags'
@@ -101,6 +105,9 @@ Plugin 'ajh17/Spacegray.vim'
 Plugin 'atelierbram/Base2Tone-vim'
 Plugin 'colepeters/spacemacs-theme.vim'
 
+" OSX stupid backspace fix
+"set backspace=indent,eol,start
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 """" END Vundle Configuration 
@@ -108,17 +115,14 @@ filetype plugin indent on    " required
 """""""""""""""""""""""""""""""""""""
 " Configuration Section
 """""""""""""""""""""""""""""""""""""
-set nowrap
-
-" OSX stupid backspace fix
-set backspace=indent,eol,start
 
 " Show linenumbers
 set number
+set ruler
 
 " Set Proper Tabs
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set smarttab
 set expandtab
 
@@ -132,15 +136,16 @@ let g:elite_mode=1
 set cursorline
 
 " Theme and Styling 
-syntax on
 set t_Co=256
+set background=dark
 
-" if (has("termguicolors"))
-"   set termguicolors
-" endif
+if (has("termguicolors"))
+  set termguicolors
+endif
 
 let base16colorspace=256  " Access colors present in 256 colorspace
 colorscheme spacegray
+" colorscheme spacemacs-theme
  
 let g:spacegray_underline_search = 1
 let g:spacegray_italicize_comments = 1
@@ -176,6 +181,9 @@ augroup markdown
     au!
     au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
 augroup END
+
+" Github Issues Configuration
+let g:github_access_token = "e6fb845bd306a3ca7f086cef82732d1d5d9ac8e0"
 
 " Vim-Alchemist Configuration
 let g:alchemist#elixir_erlang_src = "/Users/amacgregor/Projects/Github/alchemist-source"
@@ -316,6 +324,7 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 """""""""""""""""""""""""""""""""""""
 map <C-n> :NERDTreeToggle<CR>
 map <C-m> :TagbarToggle<CR>
+let NERDTreeShowHidden=1
 
 " Omnicomplete Better Nav
 inoremap <expr> <c-j> ("\<C-n>")

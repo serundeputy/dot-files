@@ -12,7 +12,27 @@ Vim
 `d7j` delete 7 lines down from the cursor
 `d12k` delete 12 lines up from the cursor
 
+Copy and Paste
 
+`y` copies a line
+  - navigate cursor to where you want to paste (stay in command mode) then press `p`
+
+`dd` cuts a line
+
+Toggle some things
+------------------
+
+`:set nu!` ~ toggle line numbers
+`:set list!` ~ toggle showing spaces and eol chars
+
+VisualBlock
+-----------
+
+To select a VisualBlock of text: `Ctrl+Shift+v` then up or down arrow to the desired
+nunmber of lines.
+  - To select all the lines to the end of each of them: `Shift+v`
+  - Then of course you can `y` or `d` to copy or cut
+  
 Nerdtree
 --------
 

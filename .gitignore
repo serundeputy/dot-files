@@ -1,1 +1,3 @@
 vim/bundles/*
+.*.swp
+.*.*.swp

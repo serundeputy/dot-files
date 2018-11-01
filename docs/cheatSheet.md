@@ -18,7 +18,14 @@ Vim
 
 `d12k` delete 12 lines up from the cursor
 
+`dw` delete to the end of the word from cursor
+
+`w` move cursor forward one word
+
+`b` move cursor back one word
+
 Copy and Paste
+--------------
 
 `y` copies a line
   - navigate cursor to where you want to paste (stay in command mode) then press `p`
@@ -29,6 +36,7 @@ Toggle some things
 ------------------
 
 `:set nu!` ~ toggle line numbers
+
 `:set list!` ~ toggle showing spaces and eol chars
 
 VisualBlock
@@ -45,4 +53,10 @@ Nerdtree
 Nerdtree gives you a file browser in the left pane of your vim session.
 You can toggle Nerdtreee open/closes with `Ctrl+n`
 
+To navigate between panes of open editor:
 
+`Ctrl+w` then
+  - `l` to right pane
+  - `j` to pane below
+  - `k` to pane above
+  - `h` to  left pane
